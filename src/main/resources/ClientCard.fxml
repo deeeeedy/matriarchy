@@ -58,6 +58,7 @@
          <font>
             <Font name="Century Gothic Bold" size="14.0" />
          </font></Label>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="106.0" layoutY="234.0" prefWidth="67.0" text="Фото " />
    </children>
 </AnchorPane>
