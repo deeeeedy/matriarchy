@@ -1,5 +1,3 @@
-package woman;
-
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
