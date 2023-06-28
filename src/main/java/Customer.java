@@ -12,6 +12,9 @@ public class Customer {
     public Customer() {
         this(null,null, 0, null,null, 0);
     }
+    public Customer(String firstName, String lastName) {
+        this(firstName,lastName, 0, null,null, 0);
+    }
     public Customer(String firstName, String lastName, int carNumber, String carModel, String phoneNumber, int clientId){
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
