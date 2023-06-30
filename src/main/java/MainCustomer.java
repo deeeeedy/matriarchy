@@ -1,3 +1,4 @@
+package src.main.java;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
