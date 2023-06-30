@@ -37,8 +37,6 @@ public class CustomerController {
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
 
-        // Очистка дополнительной информации об адресате.
-        showPersonDetails(null);
 
         // Слушаем изменения выбора, и при изменении отображаем
         // дополнительную информацию об адресате.

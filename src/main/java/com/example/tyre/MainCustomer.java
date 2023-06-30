@@ -18,57 +18,37 @@ public class MainCustomer extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Список клиентов");
-
-        initRootLayout();
-
         showPersonOverview();
     }
     private ObservableList<Customer> personData = FXCollections.observableArrayList();
 
     public MainCustomer() {
         // В качестве образца добавляем некоторые данные
-        personData.add(new Customer("Hans", "Muster"));
-        personData.add(new Customer("Ruth", "Mueller"));
-        personData.add(new Customer("Heinz", "Kurz"));
-        personData.add(new Customer("Cornelia", "Meier"));
-        personData.add(new Customer("Werner", "Meyer"));
-        personData.add(new Customer("Lydia", "Kunz"));
-        personData.add(new Customer("Anna", "Best"));
-        personData.add(new Customer("Stefan", "Meier"));
-        personData.add(new Customer("Martin", "Mueller"));
+        personData.add(new Customer("Александр", "Сушков"));
+        personData.add(new Customer("Лариса", "Кузнецова"));
+        personData.add(new Customer("Григорий", "Плечев"));
+        personData.add(new Customer("Каролина", "Ежова"));
+        personData.add(new Customer("Вячеслав", "Григорьев"));
+        personData.add(new Customer("Лидия", "Иванова"));
+        personData.add(new Customer("Анна", "Воронина"));
+        personData.add(new Customer("Степан", "Петров"));
+        personData.add(new Customer("Марк", "Гончаров"));
     }
 
     public ObservableList<Customer> getPersonData() {
         return personData;
     }
-    public void initRootLayout() {
-        try {
-            // Загружаем корневой макет из fxml файла.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainCustomer.class.getResource("RootLayout.fxml"));
-            rootLayout = (BorderPane) loader.load();
-
-            // Отображаем сцену, содержащую корневой макет.
-            Scene scene = new Scene(rootLayout);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void showPersonOverview() {
         try {
             // Загружаем сведения об адресатах.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainCustomer.class.getResource("CustomerTable.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
-
-            // Помещаем сведения об адресатах в центр корневого макета.
-            rootLayout.setCenter(personOverview);
-            // Даём контроллеру доступ к главному приложению.
             CustomerController controller = loader.getController();
             controller.setMainApp(this);
+            Scene scene = new Scene(personOverview);
+            primaryStage.setScene(scene);
+            primaryStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
