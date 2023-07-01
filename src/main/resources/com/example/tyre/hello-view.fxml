@@ -4,19 +4,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.HelloController">
     <children>
-        <TextArea layoutX="37.0" layoutY="96.0" prefHeight="26.0" prefWidth="526.0" text="Введите имя для поиска..." />
-        <ButtonBar layoutX="64.0" layoutY="316.0" prefHeight="40.0" prefWidth="456.0">
+        <TextArea layoutX="37.0" layoutY="77.0" prefHeight="26.0" prefWidth="526.0" promptText="Введите имя для поиска..." AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="77.0" />
+        <ButtonBar layoutX="64.0" layoutY="316.0" prefHeight="40.0" prefWidth="456.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="316.0">
             <buttons>
                 <Button mnemonicParsing="false" text="Добавить клиента" />
                 <Button mnemonicParsing="false" text="Удалить клиента" />
                 <Button minWidth="57.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="180.0" text="Сменить тему" />
             </buttons>
         </ButtonBar>
-      <Button layoutX="459.0" layoutY="14.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="127.0" style="-fx-background-color: #1E90FF#0000FF#0000FF;" text="Время работы" textFill="WHITE">
+      <Button fx:id="timeTable" layoutX="459.0" layoutY="14.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="127.0" style="-fx-background-color: HotPink;" text="Время работы" textFill="WHITE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Lucida Sans Unicode" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="openCustomerTable" layoutX="186.0" layoutY="207.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="246.0" style="-fx-background-color: HotPink;" text="Открыть список клиентов" textFill="#f2f2f2">
+         <font>
+            <Font name="System Bold" size="15.0" />
          </font>
       </Button>
     </children>
