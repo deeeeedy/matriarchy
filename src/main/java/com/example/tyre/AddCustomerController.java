@@ -40,7 +40,7 @@ public class AddCustomerController {
             person.setFirstName(firstNameField.getText());
             person.setLastName(lastNameField.getText());
             person.setCarModel(carModelField.getText());
-            person.setCarNumber(Integer.parseInt(carNumberField.getText()));
+            person.setCarNumber(carNumberField.getText());
             person.setPhoneNumber(phoneNumberField.getText());
             person.setClientId(Integer.parseInt(clientIdField.getText()));
             okClicked = true;
@@ -96,13 +96,6 @@ public class AddCustomerController {
 
         if (carNumberField.getText() == null || carNumberField.getText().length() == 0) {
             errorMessage += "Неверный номер автомобиля!\n";
-        } else {
-            // пытаемся преобразовать номер автомобиля в int.
-            try {
-                Integer.parseInt(carNumberField.getText());
-            } catch (NumberFormatException e) {
-                errorMessage += "Неверный номер автомобиля (должен быть числом)!\n";
-            }
         }
 
         if (phoneNumberField.getText() == null || phoneNumberField.getText().length() == 0) {

@@ -69,11 +69,24 @@ public class CustomerController {
         });
     }
     private void showPersonDetails(Customer person) {
+        exit.getScene().getWindow().hide();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("ClientCard.fxml"));
+        try {
+            loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setTitle("Информация о клиенте");
+        stage.setScene(new Scene(root));
+        stage.show();
         if (person != null) {
             // Заполняем метки информацией из объекта person.
             firstNameLabel.setText(person.getFirstName());
             lastNameLabel.setText(person.getLastName());
-            carNumberLabel.setText(Integer.toString(person.getCarNumber()));
+            carNumberLabel.setText(person.getCarNumber());
             carModelLabel.setText(person.getCarModel());
             phoneNumberLabel.setText(person.getPhoneNumber());
             clientIdLabel.setText(Integer.toString(person.getClientId()));

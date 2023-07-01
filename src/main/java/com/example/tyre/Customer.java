@@ -7,19 +7,19 @@ public class Customer {
     private final StringProperty firstName;
     private final StringProperty lastName;
     private final StringProperty phoneNumber;
-    private final IntegerProperty carNumber;
+    private final StringProperty carNumber;
     private final IntegerProperty clientId;
     private final StringProperty carModel;
     public Customer() {
-        this(null,null, 0, null,null, 0);
+        this(null,null, null, null,null, 0);
     }
     public Customer(String firstName, String lastName) {
-        this(firstName,lastName, 0, null,null, 0);
+        this(firstName,lastName, null, null,null, 0);
     }
-    public Customer(String firstName, String lastName, int carNumber, String carModel, String phoneNumber, int clientId){
+    public Customer(String firstName, String lastName, String carNumber, String carModel, String phoneNumber, int clientId){
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
-        this.carNumber = new SimpleIntegerProperty(carNumber);
+        this.carNumber = new SimpleStringProperty(carNumber);
         this.carModel = new SimpleStringProperty(carModel);
         this.phoneNumber = new SimpleStringProperty(phoneNumber);
         this.clientId = new SimpleIntegerProperty(clientId);
@@ -49,15 +49,15 @@ public class Customer {
         return lastName;
     }
 
-    public int getCarNumber() {
+    public String getCarNumber() {
         return carNumber.get();
     }
 
-    public void setCarNumber(int carNumber) {
+    public void setCarNumber(String carNumber) {
         this.carNumber.set(carNumber);
     }
 
-    public IntegerProperty carNumberProperty() {
+    public StringProperty carNumberProperty() {
         return carNumber;
     }
     public String getCarModel() {
