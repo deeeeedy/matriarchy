@@ -17,6 +17,8 @@ public class HelloController {
     private Button timeTable;
     @FXML
     private Button openCustomerTable;
+    @FXML
+    private Button addCustomer;
 
 
     @FXML
@@ -35,8 +37,7 @@ public class HelloController {
             stage.setTitle("Время работы");
             stage.setScene(new Scene(root));
             stage.showAndWait();
-        }
-        );
+        });
         openCustomerTable.setOnMouseClicked(event -> {
             openCustomerTable.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
@@ -49,6 +50,21 @@ public class HelloController {
             Parent root = loader.getRoot();
             Stage stage = new Stage();
             stage.setTitle("Список клиентов");
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+        addCustomer.setOnMouseClicked(event -> {
+            addCustomer.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("addCustomer.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Добавить клиента");
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });

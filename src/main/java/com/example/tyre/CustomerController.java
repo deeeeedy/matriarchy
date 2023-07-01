@@ -1,8 +1,15 @@
 package com.example.tyre;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class CustomerController {
     @FXML
@@ -24,6 +31,8 @@ public class CustomerController {
     private Label phoneNumberLabel;
     @FXML
     private Label clientIdLabel;
+    @FXML
+    private Button exit;
 
     // Ссылка на главное приложение.
     private MainCustomer mainApp;
@@ -37,11 +46,25 @@ public class CustomerController {
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
 
-
         // Слушаем изменения выбора, и при изменении отображаем
         // дополнительную информацию об адресате.
         personTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showPersonDetails(newValue));
+        exit.setOnMouseClicked(event -> {
+            exit.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("hello-view.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Шиномонтажка");
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
     }
     private void showPersonDetails(Customer person) {
         if (person != null) {

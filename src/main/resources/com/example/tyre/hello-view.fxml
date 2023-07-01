@@ -9,7 +9,7 @@
         <TextArea layoutX="37.0" layoutY="77.0" prefHeight="26.0" prefWidth="526.0" promptText="Введите имя для поиска..." AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="77.0" />
         <ButtonBar layoutX="64.0" layoutY="316.0" prefHeight="40.0" prefWidth="456.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="316.0">
             <buttons>
-                <Button mnemonicParsing="false" text="Добавить клиента" />
+                <Button fx:id="addCustomer" mnemonicParsing="false" text="Добавить клиента" />
                 <Button mnemonicParsing="false" text="Удалить клиента" />
                 <Button minWidth="57.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="180.0" text="Сменить тему" />
             </buttons>
