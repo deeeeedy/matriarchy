@@ -20,21 +20,11 @@ public class CustomerController {
     private TableColumn<Customer, String> firstNameColumn;
     @FXML
     private TableColumn<Customer, String> lastNameColumn;
-
-    @FXML
-    private Label firstNameLabel;
-    @FXML
-    private Label lastNameLabel;
-    @FXML
-    private Label carNumberLabel;
-    @FXML
-    private Label carModelLabel;
-    @FXML
-    private Label phoneNumberLabel;
-    @FXML
-    private Label clientIdLabel;
     @FXML
     private Button exit;
+    @FXML
+    private Button info;
+    private ClientCardController clientCardController = new ClientCardController();
 
     // Ссылка на главное приложение.
     private MainCustomer mainApp;
@@ -48,10 +38,27 @@ public class CustomerController {
         firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
         lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
 
+        info.setOnMouseClicked(event -> {
+            info.getScene().getWindow().hide();
+         clientCardController.setCustomer(personTable.getSelectionModel().getSelectedItem());
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("ClientCard.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Информация о клиенте");
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
+
         // Слушаем изменения выбора, и при изменении отображаем
         // дополнительную информацию об адресате.
-        personTable.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> showPersonDetails(newValue));
+        //personTable.getSelectionModel().selectedItemProperty().addListener(
+                //(observable, oldValue, newValue) -> showPersonDetails(newValue));
         exit.setOnMouseClicked(event -> {
             exit.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
@@ -68,39 +75,7 @@ public class CustomerController {
             stage.show();
         });
     }
-    private void showPersonDetails(Customer person) {
-        exit.getScene().getWindow().hide();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ClientCard.fxml"));
-        try {
-            loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Parent root = loader.getRoot();
-        Stage stage = new Stage();
-        stage.setTitle("Информация о клиенте");
-        stage.setScene(new Scene(root));
-        stage.show();
-        if (person != null) {
-            // Заполняем метки информацией из объекта person.
-            firstNameLabel.setText(person.getFirstName());
-            lastNameLabel.setText(person.getLastName());
-            carNumberLabel.setText(person.getCarNumber());
-            carModelLabel.setText(person.getCarModel());
-            phoneNumberLabel.setText(person.getPhoneNumber());
-            clientIdLabel.setText(Integer.toString(person.getClientId()));
 
-        } else {
-            // Если Person = null, то убираем весь текст.
-            firstNameLabel.setText("");
-            lastNameLabel.setText("");
-            carNumberLabel.setText("");
-            carModelLabel.setText("");
-            phoneNumberLabel.setText("");
-            clientIdLabel.setText("");
-        }
-    }
     public void setMainApp(MainCustomer mainApp) {
         this.mainApp = mainApp;
 

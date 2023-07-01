@@ -15,5 +15,7 @@
          </columnResizePolicy>
       </TableView>
       <Button fx:id="exit" layoutX="509.0" layoutY="361.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="77.0" text="Назад" />
+      <Button fx:id="info" layoutX="399.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Информация" />
+      <Button layoutX="300.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Удалить" />
    </children>
 </AnchorPane>

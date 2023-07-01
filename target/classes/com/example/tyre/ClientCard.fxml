@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.CustomerController">
+<AnchorPane prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.ClientCardController">
    <children>
-      <Button layoutX="527.0" layoutY="19.0" mnemonicParsing="false" text="Выход" textFill="#ef0f52">
+      <Button fx:id="exit" layoutX="527.0" layoutY="19.0" mnemonicParsing="false" text="Выход" textFill="#ef0f52">
          <font>
             <Font name="Century Gothic" size="12.0" />
          </font></Button>
@@ -29,32 +29,32 @@
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1" />
             <Label text="Фамилия" GridPane.rowIndex="1">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lastNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Номер машины" GridPane.rowIndex="2">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="carNumberLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Модель машины" GridPane.rowIndex="3">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="carModelLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Номер телефона" GridPane.rowIndex="4">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="phoneNumberLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="Клиентский номер" GridPane.rowIndex="5">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="clientIdLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
       <Label layoutX="14.0" layoutY="22.0" prefHeight="18.0" prefWidth="235.0" text="Профиль клиента" textFill="#ea034c">
