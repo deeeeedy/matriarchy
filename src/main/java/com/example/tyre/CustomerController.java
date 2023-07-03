@@ -24,6 +24,8 @@ public class CustomerController {
     private Button exit;
     @FXML
     private Button info;
+    @FXML
+    private Button delete;
     private ClientCardController clientCardController = new ClientCardController();
     private static ObservableList<Customer> personData = FXCollections.observableArrayList();
     public static void addCustomer(Customer customer){
@@ -56,11 +58,6 @@ public class CustomerController {
             stage.setScene(new Scene(root));
             stage.show();
         });
-
-        // Слушаем изменения выбора, и при изменении отображаем
-        // дополнительную информацию об адресате.
-        //personTable.getSelectionModel().selectedItemProperty().addListener(
-        //(observable, oldValue, newValue) -> showPersonDetails(newValue));
         exit.setOnMouseClicked(event -> {
             exit.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
@@ -77,4 +74,10 @@ public class CustomerController {
             stage.show();
         });
     }
+    @FXML
+    private void handleDeletePerson() {
+        int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
+        personTable.getItems().remove(selectedIndex);
+    }
+
 }
