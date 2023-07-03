@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.CustomerController">
    <children>
@@ -14,8 +15,17 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button fx:id="exit" layoutX="509.0" layoutY="361.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="77.0" text="Назад" />
-      <Button fx:id="info" layoutX="399.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Информация" />
-      <Button layoutX="300.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Удалить" />
+      <Button fx:id="exit" layoutX="509.0" layoutY="361.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="77.0" text="Назад" textFill="#f71b52">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Button>
+      <Button fx:id="info" layoutX="399.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Информация" textFill="#f42152">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Button>
+      <Button layoutX="300.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Удалить" textFill="#ec1b64">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Button>
    </children>
 </AnchorPane>

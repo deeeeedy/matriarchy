@@ -22,27 +22,27 @@
          <children>
             <Label prefHeight="17.0" prefWidth="279.0" text="Фамилия" textAlignment="CENTER">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Century Gothic" size="20.0" />
                </font></Label>
             <Label text="Имя" textAlignment="CENTER" GridPane.rowIndex="1">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Century Gothic" size="20.0" />
                </font></Label>
-            <Label prefHeight="17.0" prefWidth="167.0" text="Модель машины" GridPane.rowIndex="2">
+            <Label prefHeight="26.0" prefWidth="178.0" text="Модель машины" GridPane.rowIndex="2">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Century Gothic" size="20.0" />
                </font></Label>
             <Label text="Номер машины" GridPane.rowIndex="3">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Century Gothic" size="20.0" />
                </font></Label>
             <Label text="Номер телефона" GridPane.rowIndex="4">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Century Gothic" size="20.0" />
                </font></Label>
-            <Label text="Клиентский номер" GridPane.rowIndex="5">
+            <Label prefHeight="22.0" prefWidth="192.0" text="Клиентский номер" GridPane.rowIndex="5">
                <font>
-                  <Font size="20.0" />
+                  <Font name="Century Gothic" size="20.0" />
                </font></Label>
             <TextField fx:id="lastNameField" GridPane.columnIndex="1" />
             <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -54,8 +54,14 @@
       </GridPane>
       <ButtonBar layoutX="57.0" layoutY="346.0" prefHeight="40.0" prefWidth="528.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="15.0">
         <buttons>
-          <Button fx:id="ok" mnemonicParsing="false" text="Готово" />
-            <Button fx:id="cancel" mnemonicParsing="false" text="Отмена" />
+          <Button fx:id="ok" mnemonicParsing="false" text="Готово" textFill="#f71d5f">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font></Button>
+            <Button fx:id="cancel" mnemonicParsing="false" text="Отмена" textFill="#f72559">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font></Button>
         </buttons>
       </ButtonBar>
    </children>
