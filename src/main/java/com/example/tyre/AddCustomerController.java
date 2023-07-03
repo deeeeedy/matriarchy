@@ -45,6 +45,12 @@ public class AddCustomerController {
                 CustomerController.addCustomer(person);
                 okClicked = true;
                 ok.getScene().getWindow().hide();
+
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.initOwner(dialogStage);
+                alert.setTitle("Добавить клиента");
+                alert.setHeaderText("Клиент успешно добавлен.");
+                alert.showAndWait();
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("hello-view.fxml"));
                 try {
