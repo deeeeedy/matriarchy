@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -26,6 +27,7 @@ public class CustomerController {
     private Button info;
     @FXML
     private Button delete;
+    private Stage dialogStage;
     private ClientCardController clientCardController = new ClientCardController();
     private static ObservableList<Customer> personData = FXCollections.observableArrayList();
     public static void addCustomer(Customer customer){
@@ -77,7 +79,17 @@ public class CustomerController {
     @FXML
     private void handleDeletePerson() {
         int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
-        personTable.getItems().remove(selectedIndex);
+        if (selectedIndex >= 0) {
+            personTable.getItems().remove(selectedIndex);
+        } else {
+            // Ничего не выбрано.
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.initOwner(dialogStage);
+            alert.setTitle("Не выбрано");
+            alert.setHeaderText("Не выбран пользователь");
+            alert.setContentText("Пожалуйста, выберите пользователя в таблице.");
+            alert.showAndWait();
+        }
     }
 
 }
