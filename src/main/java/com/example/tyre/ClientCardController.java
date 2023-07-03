@@ -48,12 +48,6 @@ public class ClientCardController {
             stage.setScene(new Scene(root));
             stage.show();
         });
-        //firstNameLabel.setText(customer.getFirstName());
-        //lastNameLabel.setText(customer.getLastName());
-        //carNumberLabel.setText(customer.getCarNumber());
-        //carModelLabel.setText(customer.getCarModel());
-        //phoneNumberLabel.setText(customer.getPhoneNumber());
-        //clientIdLabel.setText(Integer.toString(customer.getClientId()));
         showPersonDetails(customer);
 
     }

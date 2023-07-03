@@ -82,9 +82,9 @@ public class CustomerController {
     }
     @FXML
     private void handleDeletePerson() {
-        int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
-        if (selectedIndex >= 0) {
-            personTable.getItems().remove(selectedIndex);
+        Customer selectedCustomer = personTable.getSelectionModel().getSelectedItem();
+        if (selectedCustomer != null) {
+            personData.remove(selectedCustomer);
         } else {
             // Ничего не выбрано.
             Alert alert = new Alert(Alert.AlertType.WARNING);
