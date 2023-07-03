@@ -48,12 +48,13 @@ public class ClientCardController {
             stage.setScene(new Scene(root));
             stage.show();
         });
-        firstNameLabel.setText(customer.getFirstName());
-        lastNameLabel.setText(customer.getLastName());
-        carNumberLabel.setText(customer.getCarNumber());
-        carModelLabel.setText(customer.getCarModel());
-        phoneNumberLabel.setText(customer.getPhoneNumber());
-        clientIdLabel.setText(Integer.toString(customer.getClientId()));
+        //firstNameLabel.setText(customer.getFirstName());
+        //lastNameLabel.setText(customer.getLastName());
+        //carNumberLabel.setText(customer.getCarNumber());
+        //carModelLabel.setText(customer.getCarModel());
+        //phoneNumberLabel.setText(customer.getPhoneNumber());
+        //clientIdLabel.setText(Integer.toString(customer.getClientId()));
+        showPersonDetails(customer);
 
     }
     public void showPersonDetails(Customer person) {
@@ -68,25 +69,13 @@ public class ClientCardController {
 
         } else {
             // Если Person = null, то убираем весь текст.
-            firstNameLabel.setText("");
-            lastNameLabel.setText("");
+            firstNameLabel.setText("Клиент не выбран");
+            lastNameLabel.setText("Клиент не выбран");
             carNumberLabel.setText("");
             carModelLabel.setText("");
             phoneNumberLabel.setText("");
             clientIdLabel.setText("");
         }
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ClientCard.fxml"));
-        try {
-            loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Parent root = loader.getRoot();
-        Stage stage = new Stage();
-        stage.setTitle("Информация о клиенте");
-        stage.setScene(new Scene(root));
-        stage.show();
     }
 }
 
