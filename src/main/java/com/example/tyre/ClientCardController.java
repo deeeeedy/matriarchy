@@ -25,10 +25,10 @@ public class ClientCardController {
     private Label clientIdLabel = new Label();
     @FXML
     private Button exit;
-    private Customer customer = new Customer();
+    private static Customer customer = new Customer();
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public static void setCustomer(Customer customer) {
+        ClientCardController.customer = customer;
     }
 
     @FXML
@@ -89,3 +89,4 @@ public class ClientCardController {
         stage.show();
     }
 }
+
