@@ -12,7 +12,6 @@
             <Image url="@../../../background.jpg" />
          </image>
       </ImageView>
-        <TextArea layoutX="37.0" layoutY="77.0" prefHeight="26.0" prefWidth="526.0" promptText="Введите имя для поиска..." AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="77.0" />
         <ButtonBar layoutX="83.0" layoutY="351.0" prefHeight="35.0" prefWidth="454.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="351.0">
             <buttons>
                 <Button fx:id="addCustomer" mnemonicParsing="false" text="Добавить клиента" textFill="#f43075">
@@ -25,12 +24,12 @@
                </font></Button>
             </buttons>
         </ButtonBar>
-      <Button fx:id="timeTable" layoutX="366.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="219.0" style="-fx-background-color: HotPink;" text="График работы" textFill="WHITE" AnchorPane.rightAnchor="14.799999999999955" AnchorPane.topAnchor="14.0">
+      <Button fx:id="timeTable" layoutX="367.0" layoutY="42.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="219.0" style="-fx-background-color: HotPink;" text="График работы" textFill="WHITE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="42.0">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="openCustomerTable" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: HotPink;" text="Список клиентов" textFill="#f2f2f2" AnchorPane.rightAnchor="353.8" AnchorPane.topAnchor="14.0">
+      <Button fx:id="openCustomerTable" layoutX="27.0" layoutY="42.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="219.0" style="-fx-background-color: HotPink;" text="Список клиентов" textFill="#f2f2f2" AnchorPane.rightAnchor="354.0" AnchorPane.topAnchor="42.0">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>

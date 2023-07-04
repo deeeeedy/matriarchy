@@ -62,6 +62,7 @@ public class CustomerController {
             Stage stage = new Stage();
             stage.setTitle("Информация о клиенте");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         });
         exit.setOnMouseClicked(event -> {
@@ -77,6 +78,7 @@ public class CustomerController {
             Stage stage = new Stage();
             stage.setTitle("Шиномонтажка");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         });
     }

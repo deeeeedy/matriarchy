@@ -34,6 +34,7 @@ public class HelloController {
             Stage stage = new Stage();
             stage.setTitle("Время работы");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.showAndWait();
         });
         openCustomerTable.setOnMouseClicked(event -> {
@@ -49,6 +50,7 @@ public class HelloController {
             Stage stage = new Stage();
             stage.setTitle("Список клиентов");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.showAndWait();
         });
         addCustomer.setOnMouseClicked(event -> {
@@ -64,6 +66,7 @@ public class HelloController {
             Stage stage = new Stage();
             stage.setTitle("Добавить клиента");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.showAndWait();
         });
     }

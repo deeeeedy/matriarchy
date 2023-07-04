@@ -46,6 +46,7 @@ public class ClientCardController {
             Stage stage = new Stage();
             stage.setTitle("Информация о клиенте");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         });
         showPersonDetails(customer);

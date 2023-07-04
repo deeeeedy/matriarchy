@@ -78,6 +78,7 @@ public class AddCustomerController {
             Stage stage = new Stage();
             stage.setTitle("Шиномонтажка");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         });
     }
