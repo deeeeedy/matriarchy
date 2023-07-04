@@ -3,7 +3,6 @@ package com.example.tyre;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
 
 public class PriceController {
@@ -24,7 +23,6 @@ public class PriceController {
         exit.setOnMouseClicked(event -> {
             exit.getScene().getWindow().hide();
         });
-        type.itemsProperty();
 
     }
     @FXML

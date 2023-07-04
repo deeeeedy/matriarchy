@@ -22,7 +22,7 @@ public class HelloController {
     private AnchorPane anchorPane;
     @FXML
     private Button price;
-    private static String M_Style;
+    private static String M_Style = "-fx-background-color: pink;";
 
 
     @FXML
