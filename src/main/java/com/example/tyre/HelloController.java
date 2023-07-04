@@ -20,6 +20,8 @@ public class HelloController {
     private Button addCustomer;
     @FXML
     private AnchorPane anchorPane;
+    @FXML
+    private Button price;
     private static String M_Style;
 
 
@@ -66,6 +68,21 @@ public class HelloController {
             Parent root = loader.getRoot();
             Stage stage = new Stage();
             stage.setTitle("Добавить клиента");
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
+            stage.showAndWait();
+        });
+        price.setOnMouseClicked(event -> {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("price.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setTitle("Стоимость");
             stage.setScene(new Scene(root));
             stage.setResizable(false);
             stage.showAndWait();

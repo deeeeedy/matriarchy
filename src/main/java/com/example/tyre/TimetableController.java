@@ -9,7 +9,6 @@ public class TimetableController {
     private Button exit;
     @FXML
     private AnchorPane backgr;
-    private String style = HelloController.getStyle();
     @FXML
     void initialize() {
             backgr.setStyle(HelloController.getStyle());
