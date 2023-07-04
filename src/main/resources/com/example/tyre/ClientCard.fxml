@@ -25,39 +25,39 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Имя" textFill="#f71d5f">
+            <Label text="Имя" textFill="#ff74a2">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label fx:id="firstNameLabel" text="Label" textFill="#f71d5f" GridPane.columnIndex="1" />
-            <Label text="Фамилия" textFill="#f71d5f" GridPane.rowIndex="1">
+            <Label fx:id="firstNameLabel" text="Label" textFill="#ff74a2" GridPane.columnIndex="1" />
+            <Label text="Фамилия" textFill="#ff74a2" GridPane.rowIndex="1">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label fx:id="lastNameLabel" text="Label" textFill="#f71d5f" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Номер машины" textFill="#f71d5f" GridPane.rowIndex="2">
+            <Label fx:id="lastNameLabel" text="Label" textFill="#ff74a2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Номер машины" textFill="#ff74a2" GridPane.rowIndex="2">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label fx:id="carNumberLabel" text="Label" textFill="#f71d5f" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label text="Модель машины" textFill="#f71d5f" GridPane.rowIndex="3">
+            <Label fx:id="carNumberLabel" text="Label" textFill="#ff74a2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Модель машины" textFill="#ff74a2" GridPane.rowIndex="3">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label fx:id="carModelLabel" text="Label" textFill="#f71d5f" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="Номер телефона" textFill="#f71d5f" GridPane.rowIndex="4">
+            <Label fx:id="carModelLabel" text="Label" textFill="#ff74a2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Номер телефона" textFill="#ff74a2" GridPane.rowIndex="4">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label fx:id="phoneNumberLabel" text="Label" textFill="#f71d5f" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label text="Клиентский номер" textFill="#f71d5f" GridPane.rowIndex="5">
+            <Label fx:id="phoneNumberLabel" text="Label" textFill="#ff74a2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Клиентский номер" textFill="#ff74a2" GridPane.rowIndex="5">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Label>
-            <Label fx:id="clientIdLabel" text="Label" textFill="#f71d5f" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="clientIdLabel" text="Label" textFill="#ff74a2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Label layoutX="14.0" layoutY="22.0" prefHeight="18.0" prefWidth="235.0" text="Профиль клиента" textFill="#ea034c">
+      <Label layoutX="14.0" layoutY="22.0" prefHeight="18.0" prefWidth="235.0" text="Профиль клиента" textFill="#ff74a2">
          <font>
             <Font name="Century Gothic Bold" size="14.0" />
          </font></Label>
@@ -65,6 +65,6 @@
          <image>
             <Image url="@pic1.jpg" />
          </image></ImageView>
-      <Label layoutX="106.0" layoutY="234.0" prefWidth="67.0" text="Фото " textFill="#f71d5f" />
+      <Label layoutX="106.0" layoutY="234.0" prefWidth="67.0" text="Фото " textFill="#ff74a2" />
    </children>
 </AnchorPane>
