@@ -5,20 +5,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: HotPink;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.HelloController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.HelloController">
     <children>
-      <ImageView fitHeight="491.0" fitWidth="709.0" layoutX="-38.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-2.004119873046875" AnchorPane.leftAnchor="-38.0" AnchorPane.rightAnchor="-71.0" AnchorPane.topAnchor="-3.0">
-         <image>
-            <Image url="@../../../background.jpg" />
-         </image>
-      </ImageView>
         <ButtonBar layoutX="83.0" layoutY="351.0" prefHeight="35.0" prefWidth="454.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="351.0">
             <buttons>
                 <Button fx:id="addCustomer" mnemonicParsing="false" text="Добавить клиента" textFill="#f43075">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Button>
-                <Button minWidth="57.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="180.0" text="Сменить тему" textFill="#ef2554">
+                <Button minWidth="57.0" mnemonicParsing="false" onAction="#onSwitchTheme" prefHeight="19.0" prefWidth="180.0" text="Сменить тему" textFill="#ef2554">
                <font>
                   <Font name="Century Gothic" size="12.0" />
                </font></Button>
@@ -34,5 +29,6 @@
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
     </children>
 </AnchorPane>

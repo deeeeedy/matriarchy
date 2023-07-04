@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,6 +18,9 @@ public class HelloController {
     private Button openCustomerTable;
     @FXML
     private Button addCustomer;
+    @FXML
+    private AnchorPane anchorPane;
+    private static String M_Style;
 
 
     @FXML
@@ -69,6 +73,26 @@ public class HelloController {
             stage.setResizable(false);
             stage.showAndWait();
         });
-    }
 
+    }
+    @FXML
+    private void onSwitchTheme()
+    {
+        String style = anchorPane.getStyle();
+
+        if (style.equals("-fx-background-color: pink;"))
+        {
+            M_Style = "-fx-background-color: DimGray;";
+            anchorPane.setStyle(M_Style);
+        }
+        else
+        {
+            M_Style = "-fx-background-color: pink;";
+            anchorPane.setStyle(M_Style);
+        }
+    }
+    public static String getStyle()
+    {
+        return M_Style;
+    }
 }

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.AddCustomerController">
+<AnchorPane fx:id="backgr" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.AddCustomerController">
    <children>
       <GridPane layoutX="18.0" layoutY="11.0" prefHeight="325.0" prefWidth="568.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="11.0">
         <columnConstraints>
@@ -20,27 +20,27 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="17.0" prefWidth="279.0" text="Фамилия" textAlignment="CENTER">
+            <Label prefHeight="17.0" prefWidth="279.0" text="Фамилия" textAlignment="CENTER" textFill="#f71d5f">
                <font>
                   <Font name="Century Gothic" size="20.0" />
                </font></Label>
-            <Label text="Имя" textAlignment="CENTER" GridPane.rowIndex="1">
+            <Label text="Имя" textAlignment="CENTER" textFill="#f71d5f" GridPane.rowIndex="1">
                <font>
                   <Font name="Century Gothic" size="20.0" />
                </font></Label>
-            <Label prefHeight="26.0" prefWidth="178.0" text="Модель машины" GridPane.rowIndex="2">
+            <Label prefHeight="26.0" prefWidth="178.0" text="Модель машины" textFill="#f71d5f" GridPane.rowIndex="2">
                <font>
                   <Font name="Century Gothic" size="20.0" />
                </font></Label>
-            <Label text="Номер машины" GridPane.rowIndex="3">
+            <Label text="Номер машины" textFill="#f71d5f" GridPane.rowIndex="3">
                <font>
                   <Font name="Century Gothic" size="20.0" />
                </font></Label>
-            <Label text="Номер телефона" GridPane.rowIndex="4">
+            <Label text="Номер телефона" textFill="#f71d5f" GridPane.rowIndex="4">
                <font>
                   <Font name="Century Gothic" size="20.0" />
                </font></Label>
-            <Label prefHeight="22.0" prefWidth="192.0" text="Клиентский номер" GridPane.rowIndex="5">
+            <Label prefHeight="22.0" prefWidth="192.0" text="Клиентский номер" textFill="#f71d5f" GridPane.rowIndex="5">
                <font>
                   <Font name="Century Gothic" size="20.0" />
                </font></Label>

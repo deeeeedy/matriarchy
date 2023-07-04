@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -31,7 +32,7 @@ public class CustomerController {
     @FXML
     private TextField filterField;
     @FXML
-    private Button delete;
+    private AnchorPane backgr;
     private Stage dialogStage;
     private ClientCardController clientCardController = new ClientCardController();
     private static ObservableList<Customer> personData = FXCollections.observableArrayList();
@@ -45,6 +46,7 @@ public class CustomerController {
     @FXML
     private void initialize() {
         // Инициализация таблицы адресатов с двумя столбцами.
+        backgr.setStyle(HelloController.getStyle());
         personTable.setItems(personData);
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));

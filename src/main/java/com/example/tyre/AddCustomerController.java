@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -29,11 +30,14 @@ public class AddCustomerController {
     private Button ok;
     @FXML
     private Button cancel;
+    @FXML
+    private AnchorPane backgr;
     private Customer person = new Customer();
     private Stage dialogStage;
     private boolean okClicked = false;
     @FXML
     private void initialize() {
+        backgr.setStyle(HelloController.getStyle());
         ok.setOnMouseClicked(event -> {
             if (isInputValid()) {
                 person.setFirstName(firstNameField.getText());

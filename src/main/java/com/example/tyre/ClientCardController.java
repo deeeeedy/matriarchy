@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,6 +26,8 @@ public class ClientCardController {
     private Label clientIdLabel = new Label();
     @FXML
     private Button exit;
+    @FXML
+    private AnchorPane backgr;
     private static Customer customer = new Customer();
 
     public static void setCustomer(Customer customer) {
@@ -33,6 +36,7 @@ public class ClientCardController {
 
     @FXML
     private void initialize() {
+        backgr.setStyle(HelloController.getStyle());
         exit.setOnMouseClicked(event -> {
             exit.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
