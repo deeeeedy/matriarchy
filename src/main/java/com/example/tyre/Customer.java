@@ -3,6 +3,9 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 public class Customer {
     private final StringProperty firstName;
     private final StringProperty lastName;
@@ -10,6 +13,7 @@ public class Customer {
     private final StringProperty carNumber;
     private final IntegerProperty clientId;
     private final StringProperty carModel;
+    private final String addingDate;
     public Customer() {
         this(null,null, null, null,null, 0);
     }
@@ -23,6 +27,7 @@ public class Customer {
         this.carModel = new SimpleStringProperty(carModel);
         this.phoneNumber = new SimpleStringProperty(phoneNumber);
         this.clientId = new SimpleIntegerProperty(clientId);
+        this.addingDate = new SimpleStringProperty(new SimpleDateFormat("dd-MM-yyyy").format(new Date())).getValue();
     }
 
     public String getFirstName() {
@@ -92,5 +97,9 @@ public class Customer {
 
     public IntegerProperty clientIdProperty() {
         return clientId;
+    }
+
+    public String getAddingDate() {
+        return addingDate;
     }
 }

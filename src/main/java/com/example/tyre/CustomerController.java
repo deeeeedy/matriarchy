@@ -23,6 +23,8 @@ public class CustomerController {
     @FXML
     private TableColumn<Customer, String> phoneNumberColumn;
     @FXML
+    private TableColumn<Customer, String> addingDateColumn;
+    @FXML
     private Button exit;
     @FXML
     private Button info;
@@ -47,6 +49,7 @@ public class CustomerController {
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
         phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        addingDateColumn.setCellValueFactory(new PropertyValueFactory<>("addingDate"));
 
         info.setOnMouseClicked(event -> {
             info.getScene().getWindow().hide();
