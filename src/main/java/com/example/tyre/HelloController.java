@@ -26,7 +26,6 @@ public class HelloController {
     @FXML
     public void initialize(){
         timeTable.setOnMouseClicked(event -> {
-            timeTable.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("timetable.fxml"));
             try {
@@ -42,7 +41,6 @@ public class HelloController {
             stage.showAndWait();
         });
         openCustomerTable.setOnMouseClicked(event -> {
-            openCustomerTable.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("CustomerTable.fxml"));
             try {
@@ -58,7 +56,6 @@ public class HelloController {
             stage.showAndWait();
         });
         addCustomer.setOnMouseClicked(event -> {
-            addCustomer.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("addCustomer.fxml"));
             try {

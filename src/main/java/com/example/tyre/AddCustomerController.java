@@ -1,17 +1,12 @@
 package com.example.tyre;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
-
-import java.io.IOException;
 
 public class AddCustomerController {
     @FXML
@@ -55,35 +50,10 @@ public class AddCustomerController {
                 alert.setTitle("Добавить клиента");
                 alert.setHeaderText("Клиент успешно добавлен.");
                 alert.showAndWait();
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("hello-view.fxml"));
-                try {
-                    loader.load();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-                Parent root = loader.getRoot();
-                Stage stage = new Stage();
-                stage.setTitle("Шиномонтажка");
-                stage.setScene(new Scene(root));
-                stage.show();
             }
         });
         cancel.setOnMouseClicked(event -> {
             cancel.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("hello-view.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setTitle("Шиномонтажка");
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.show();
         });
     }
     public boolean isOkClicked() {

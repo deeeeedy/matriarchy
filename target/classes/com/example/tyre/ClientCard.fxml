@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="backgr" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.ClientCardController">
+<AnchorPane fx:id="backgr" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.ClientCardController">
    <children>
       <Button fx:id="exit" layoutX="527.0" layoutY="19.0" mnemonicParsing="false" text="Выход" textFill="#ef0f52">
          <font>
