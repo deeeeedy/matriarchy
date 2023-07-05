@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d8308b-3b7a-47bf-bd5b-12e638922627" name="Changes" comment="some changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tyre/Master.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/shi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tyre/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tyre/TimetableController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tyre/timetable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tyre/timetable.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tyre/PriceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tyre/PriceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/shina1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tyre/TimetableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tyre/TimetableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tyre/timetable.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tyre/timetable.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
