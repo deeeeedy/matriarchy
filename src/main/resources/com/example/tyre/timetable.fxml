@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="backgr" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.TimetableController">
+<AnchorPane fx:id="backgr" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tyre.TimetableController">
    <children>
       <ImageView fitHeight="169.0" fitWidth="162.0" layoutX="-47.0" layoutY="-48.0" pickOnBounds="true" preserveRatio="true" rotate="49.6">
          <image>
@@ -34,6 +34,16 @@
       <Label layoutX="108.0" layoutY="168.0" prefHeight="112.0" prefWidth="426.0" text="без перерывов и выходных!" textFill="#ff74a2" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="168.0">
          <font>
             <Font name="Century Gothic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="443.0" layoutY="14.0" text="Сегодня:" textFill="#a10a3a">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="524.0" layoutY="14.0" text="Label" textFill="#a10a3a">
+         <font>
+            <Font size="17.0" />
          </font>
       </Label>
    </children>
