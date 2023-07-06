@@ -17,8 +17,15 @@ public class Customer {
     public Customer() {
         this(null,null, null, null,null, 0);
     }
-    public Customer(String firstName, String lastName) {
-        this(firstName,lastName, null, null,null, 0);
+    public Customer (String firstName, String lastName, String carNumber, String carModel, String phoneNumber, int clientId, String date) {
+        this.firstName = new SimpleStringProperty(firstName);
+        this.lastName = new SimpleStringProperty(lastName);
+        this.carNumber = new SimpleStringProperty(carNumber);
+        this.carModel = new SimpleStringProperty(carModel);
+        this.phoneNumber = new SimpleStringProperty(phoneNumber);
+        this.clientId = new SimpleIntegerProperty(clientId);
+        this.addingDate = date;
+
     }
     public Customer(String firstName, String lastName, String carNumber, String carModel, String phoneNumber, int clientId){
         this.firstName = new SimpleStringProperty(firstName);
