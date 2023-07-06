@@ -63,7 +63,7 @@
          </font></Label>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="31.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@pic1.jpg" />
+            <Image url="@../../../hello_kitty_app_icon.jpg" />
          </image></ImageView>
       <Label layoutX="106.0" layoutY="234.0" prefWidth="67.0" text="Фото " textFill="#ff74a2" />
    </children>
